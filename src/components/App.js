@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import {
     fetchStock,
@@ -30,11 +30,15 @@ const App = props => {
         props.fetchStockNews(ticker);
     }
 
+    useEffect(() => {
+        onSearch('AAPL');
+    });
+
     return (
         <div>
             <Banner />
             <div className='ui container'>
-                <div className='ui grid'>
+                <div className='ui mobile reversed stackable grid'>
                     <div className='ui eleven wide column'>
                         <StockView />
                     </div>
