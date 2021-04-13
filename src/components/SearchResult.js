@@ -1,8 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux'
-import { setSearchTerm } from '../actions'
 
-const SearchResult = ({ stock, onSearch, setSearchTerm }) => {
+const SearchResult = ({ stock, onSearch }) => {
     const handleClick = () => {
         onSearch(stock.symbol);
     };
@@ -27,9 +25,9 @@ const SearchResult = ({ stock, onSearch, setSearchTerm }) => {
                     </button>
                 </div>
             </div>
-            <div className='ui divider'/>
+            <div className='ui divider' />
         </div>
     );
 };
 
-export default connect(null, { setSearchTerm })(SearchResult);
+export default (SearchResult);

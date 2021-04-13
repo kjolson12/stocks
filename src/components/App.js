@@ -55,7 +55,7 @@ const App = props => {
 export default connect(null,
     {
         fetchStock,
-        fetchStockQuote, 
+        fetchStockQuote,
         fetchStockData1D,
         fetchStockData1W,
         fetchStockData1M,

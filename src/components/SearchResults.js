@@ -19,7 +19,8 @@ class SearchResults extends React.Component {
                     stock={stock}
                     onSearch={this.props.onSearch}
                     key={stock.symbol}
-                />);
+                />
+            );
         }
     }
     
